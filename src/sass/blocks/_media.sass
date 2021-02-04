@@ -6,6 +6,10 @@
             display: flex
             justify-content: center
             align-items: center
+    .consultation
+        display: flex
+        justify-content: center
+        
 @media screen and ( max-width: 767px )
     .header
         &__official
@@ -18,21 +22,30 @@
             justify-content: space-evenly
         &__item:not(:last-child)
             margin-bottom: 30px
-    
-    
+    .title
+        &_white
+            font-size: 26px
+    .consultation
+        &__description
+            font-size: 18px
+   
 @media screen and ( max-width: 575px  )
     .promo
         &__header
             font-size: 30px
         &__subheader
             font-size: 18px
-        
     .about
         &__wrapper
             flex-direction: column
             align-items: center
     .title
         font-size: 24px
+        &_white
+            font-size: 20px
+    .button
+        &_submit
+            font-size: 14px
 @media screen and ( max-width: 440px  )
     *
         overflow-x: hidden
@@ -58,6 +71,22 @@
             font-size: 14px
             width: 240px
             height: 40px
+    .title
+        &_white
+            font-size: 20px
+            text-align: center
+    .consultation
+        &__wrapper
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+        &__description
+            font-size: 16px
+            margin-top: 30px
+    .form-feed
+        input
+            font-size: 12px
 @media screen and ( max-width: 349px  )
     .promo
         &__header
