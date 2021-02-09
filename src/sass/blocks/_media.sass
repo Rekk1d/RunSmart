@@ -9,7 +9,9 @@
     .consultation
         display: flex
         justify-content: center
-        
+    .catalog
+        &__content
+            justify-content: center
 @media screen and ( max-width: 767px )
     .header
         &__official
@@ -28,6 +30,15 @@
     .consultation
         &__description
             font-size: 18px
+    .catalog
+        
+        &__tab
+            width: 150px
+            height: 35px
+            font-size: 14px
+            line-height: 35px
+            
+
    
 @media screen and ( max-width: 575px  )
     .promo
@@ -46,6 +57,19 @@
     .button
         &_submit
             font-size: 14px
+    .catalog
+        &__content
+            margin-left: 20px
+@media screen and ( max-width: 500px )
+    .catalog
+        &__tabs
+            flex-direction: column
+        &__tab
+            width: 200px
+            height: 40px
+            &:not(:last-child)
+                margin-bottom: 20px
+    
 @media screen and ( max-width: 440px  )
     *
         overflow-x: hidden
