@@ -150,13 +150,20 @@
             margin-top: 20px
         &__link-item
             border: none
-    .modal
-        width: 300px
         &__title
             font-size: 16px
     .form-feed
         width: 200px
         margin-left: 10px
+@media screen and ( max-width: 400px  )
+    .modal
+        width: 300px
+        input
+            width: 220px
+        button
+            width: 220px
+        label.error
+            max-width: 220px
 @media screen and ( max-width: 349px  )
     .promo
         &__header
@@ -170,6 +177,5 @@
             font-size: 16px
         &__descr
             font-size: 12px
-            
     
     
