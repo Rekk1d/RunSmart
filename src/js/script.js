@@ -1,3 +1,4 @@
+//slider
 $(document).ready(function(){
     $('.slider__wrapper').slick({
         speed: 1000,
@@ -14,6 +15,9 @@ $(document).ready(function(){
             }
         ]
     });
+    
+    
+    //tabs
     $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
       $(this)
         .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
@@ -76,6 +80,8 @@ $(document).ready(function(){
 
     $('input[name=phone]').mask("+7 (999) 999-99-99");
 
+    //submitting forms
+    
     $('form').submit(function(e) {
       e.preventDefault();
       $.ajax({
@@ -90,5 +96,20 @@ $(document).ready(function(){
           $('form').trigger('reset');
       });
       return false;
+  });
+
+  //pageup
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 1600) {
+      $('.pageup').fadeIn();
+    } else 
+    $('.pageup').fadeOut();
+
+  });
+  $("a[href^='#']").click(function(){
+    const _href = $(this).attr("href");
+    $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+    return false;
   });
 });
